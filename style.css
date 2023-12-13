@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+img{
+  border-radius:px;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+section {
+min-height: 100vh;
+width: 75%;
+margin: 10px auto 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.title {
+  margin: 5px 0;
+}
+
+.box {
+  max-width: 1500px;
+  margin-top: 5px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+  
+}
+
+.item-name {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* .img-iphone{
+  max-width: 400px;
+} */
+
+.item-name h3 {
+  font-size: 1.8rem;
+}
+
+.discr {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.discr img{
+  height: 300px;
+}
+.discr p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 22px
+}
+
+.box.active .discr {
+  max-height: 650px;
+  animation: fade 1s ease-in-out;
+}
+
+.box.active svg {
+  transform: rotate(180deg);
+}
+
+.text{
+  padding: 5px 15px;
+}
+svg {
+  transition: transform .5s ease-in;
+}
+
+.product-title {
+margin-bottom: 5px;
+}
+.text span{
+  padding-top: 10px;
+  text-align: right;
+}
+
+.reviews p{
+  font-size: 19px;
+  padding-bottom: 15px;
+}
+
+a {
+  color: inherit;
+}
+
+
+.text::before{
+  content: 'Description :';
+}
+
+.reviews::before {
+  content: 'Reviews :';
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform:  translateY(0px);
+  }
+}
